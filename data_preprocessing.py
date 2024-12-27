@@ -17,6 +17,6 @@ with open(output_file, mode='w', newline='') as out_file:
             csv_reader = csv.reader(src_file)
             next(csv_reader)
             for row in csv_reader:
-                if row[0] != 'pink morsel':
+                if row[0] == 'pink morsel':
                     csv_writer.writerow([float(row[1].replace('$',''))* int(row[2]), row[3],row[4]])
                     
